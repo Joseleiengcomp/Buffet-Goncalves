@@ -7,20 +7,14 @@
     <div>
       <h1><a href="/">Buffet Gonçalves</a> </h1>
     </div>
+    {% for post in posts %}
+        <div>
+            <p>published: {{ post.published_date }}</p>
+            <h2><a href=""> {{ post.title }} </a></h2>
+            <p> {{ post.text|linebreaksbr }} </p>
 
-    <div>
-      <p>publicado 19.02.2022, 14:14</p>
-      <h2><a href="/">Meu primeiro Post</a> </h2>
-      <p>Para se fazer uma boa festa, devemos sempre planejar com antecedência, dividir a festa em partes, acolhimento,
-      entrada, bebidas, prato principal, sobremesa, músicas, etc. </p>
-    </div>
-
-    <div>
-        <p>publicado 18.02.2022, 15:00</p>
-        <h2><a href="">Meu segundo Post</a></h2>
-        <p>Pesquise sempre os profissionais que forem ser contratados, marque visita, degustação, faça contratos
-        registrados em cartório de preferencia...</p>
-    </div>
+        </div>
+    {% endfor %}
 
 
 </body>
